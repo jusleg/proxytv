@@ -9,7 +9,7 @@ endif
 .PHONY: all
 
 .PHONY: build
-build: clean build-css copy-web-assets
+build: clean copy-web-assets
 	go build -tags release -o dist/proxytv -ldflags "-X 'main.gitCommit=$(GIT_COMMIT)'" ./cmd/main.go
 
 .PHONY: linux
